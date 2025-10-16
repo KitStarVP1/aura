@@ -14,23 +14,23 @@
 <body>
 
     <!-- Barra de Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand logo" href="#">Aura</a>
+            <a class="navbar-brand logo" href="#inicio">Aura</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#productos">Trajes de Baño</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#productos">Lencería</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Colección</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sobre-nosotras">Sobre Nosotras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
-                <div class="d-flex">
+                <div class="d-flex align-items-center">
                     <a href="#" class="nav-link"><i class="bi bi-search"></i></a>
-                    <a href="#" class="nav-link mx-3"><i class="bi bi-person"></i></a>
+                    <a href="#" class="nav-link mx-3"><i class="bi bi-person-circle"></i></a>
                     <a href="#" class="nav-link position-relative">
                         <i class="bi bi-cart"></i>
                         <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
@@ -44,16 +44,17 @@
 
     <!-- Sección Principal (Hero) -->
     <header id="inicio" class="hero-section">
-        <div class="container text-center">
-            <h1>Elegancia y Confianza en cada detalle.</h1>
-            <a href="#productos" class="btn btn-primary btn-lg mt-3">Descubrir Colección</a>
+        <div class="container fade-in">
+            <h1>Elegancia que Empodera</h1>
+            <p class="lead">Descubre diseños que celebran tu confianza y feminidad.</p>
+            <a href="#productos" class="btn btn-custom mt-3">Explorar Colección</a>
         </div>
     </header>
 
     <!-- Productos Destacados -->
     <section id="productos" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Productos Destacados</h2>
+    <div class="container fade-in">
+            <h2 class="section-title">Nuestra Colección</h2>
             <div class="row">
                 <!-- Producto 1 -->
                 <div class="col-md-4 col-sm-6 mb-4">
@@ -62,7 +63,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Bikini "Solsticio"</h5>
                             <p class="card-text">$75.00</p>
-                            <a href="#" class="btn btn-outline-dark">Añadir al carrito</a>
+                            <a href="#" class="btn btn-outline-custom">Añadir al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +74,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Conjunto "Medianoche"</h5>
                             <p class="card-text">$90.00</p>
-                            <a href="#" class="btn btn-outline-dark">Añadir al carrito</a>
+                            <a href="#" class="btn btn-outline-custom">Añadir al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -84,17 +85,70 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Enterizo "Atardecer"</h5>
                             <p class="card-text">$85.00</p>
-                            <a href="#" class="btn btn-outline-dark">Añadir al carrito</a>
+                            <a href="#" class="btn btn-outline-custom">Añadir al carrito</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Certificados y Garantías -->
+    <section id="certificados" class="py-5">
+        <div class="container fade-in text-center">
+            <h2 class="section-title mb-4">Calidad y Confianza</h2>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-3 col-6 mb-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Sello de Calidad" style="max-width:80px;">
+                    <p class="mt-2">Materiales Premium</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/929/929416.png" alt="Pago Seguro" style="max-width:80px;">
+                    <p class="mt-2">Pago 100% Seguro</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Devoluciones" style="max-width:80px;">
+                    <p class="mt-2">Devoluciones Garantizadas</p>
+                </div>
+            </div>
+            <p class="lead">Tu satisfacción es nuestra prioridad. Todos nuestros productos cuentan con garantía de calidad y puedes realizar devoluciones sin complicaciones.</p>
+        </div>
+    </section>
 
+        <!-- Guía de Tallas -->
+        <section id="guia-tallas" class="py-5 bg-light">
+            <div class="container fade-in">
+                <h2 class="section-title mb-4">Guía de Tallas</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Talla</th>
+                                    <th>Busto (cm)</th>
+                                    <th>Cintura (cm)</th>
+                                    <th>Cadera (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>XS</td><td>76-82</td><td>56-62</td><td>82-88</td></tr>
+                                <tr><td>S</td><td>82-88</td><td>62-68</td><td>88-94</td></tr>
+                                <tr><td>M</td><td>88-94</td><td>68-74</td><td>94-100</td></tr>
+                                <tr><td>L</td><td>94-100</td><td>74-80</td><td>100-106</td></tr>
+                                <tr><td>XL</td><td>100-106</td><td>80-86</td><td>106-112</td></tr>
+                                <tr><td>XXL</td><td>106-112</td><td>86-92</td><td>112-118</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" alt="Guía de Tallas" class="img-fluid rounded shadow" style="max-width:120px;">
+                        <p class="mt-2" style="font-size:0.95rem; color:#555;">Mide tu busto, cintura y cadera para encontrar tu talla ideal. Si tienes dudas, contáctanos y te asesoramos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!-- Sobre Nosotras -->
-    <section id="sobre-nosotras" class="py-5 bg-light">
-        <div class="container">
+    <section id="sobre-nosotras" class="py-5">
+    <div class="container fade-in">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h2>Nuestra Historia</h2>
@@ -107,19 +161,75 @@
         </div>
     </section>
 
+        <!-- Preguntas Frecuentes (FAQ) -->
+        <section id="faq" class="py-5">
+            <div class="container fade-in">
+                <h2 class="section-title mb-4">Preguntas Frecuentes</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                ¿Cómo elijo mi talla ideal?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Consulta nuestra <a href="#guia-tallas">Guía de Tallas</a> para encontrar el ajuste perfecto según tus medidas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                ¿Cuáles son los métodos de pago disponibles?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Aceptamos tarjetas de crédito, débito y pagos seguros en línea.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                ¿Realizan envíos internacionales?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, enviamos a varios países. Consulta nuestra sección de Envíos y Devoluciones para más detalles.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                ¿Puedo devolver o cambiar un producto?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, puedes realizar devoluciones o cambios dentro de los 15 días posteriores a la compra. Consulta nuestra política de devoluciones.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!-- Testimonios -->
     <section id="testimonios" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Lo que dicen nuestras clientas</h2>
+    <div class="container fade-in">
+            <h2 class="section-title">Lo que dicen nuestras clientas</h2>
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner text-center">
+                <div class="carousel-inner">
                     <!-- Testimonio 1 -->
                     <div class="carousel-item active">
                         <div class="testimonial-card">
                             <div class="rating mb-2">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
-                            <p class="testimonial-text fst-italic fs-5">"¡La calidad es increíble! Me siento más segura y elegante que nunca. El conjunto Medianoche es simplemente un sueño."</p>
+                            <p class="testimonial-text fst-italic">"¡La calidad es increíble! Me siento más segura y elegante que nunca. El conjunto Medianoche es simplemente un sueño."</p>
                             <p class="testimonial-author fw-bold">- Sofía L.</p>
                         </div>
                     </div>
@@ -129,7 +239,7 @@
                             <div class="rating mb-2">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                             </div>
-                            <p class="testimonial-text fst-italic fs-5">"Compré el bikini Solsticio para mis vacaciones y recibí muchísimos cumplidos. El ajuste es perfecto y el color es precioso."</p>
+                            <p class="testimonial-text fst-italic">"Compré el bikini Solsticio para mis vacaciones y recibí muchísimos cumplidos. El ajuste es perfecto y el color es precioso."</p>
                             <p class="testimonial-author fw-bold">- Valentina M.</p>
                         </div>
                     </div>
@@ -139,7 +249,7 @@
                              <div class="rating mb-2">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
-                            <p class="testimonial-text fst-italic fs-5">"Finalmente una marca que entiende el cuerpo femenino. Comodidad y sensualidad en una sola pieza. ¡Totalmente recomendada!"</p>
+                            <p class="testimonial-text fst-italic">"Finalmente una marca que entiende el cuerpo femenino. Comodidad y sensualidad en una sola pieza. ¡Totalmente recomendada!"</p>
                             <p class="testimonial-author fw-bold">- Camila G.</p>
                         </div>
                     </div>
@@ -156,18 +266,66 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contacto" class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <div class="mb-3">
-                <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="text-white mx-2"><i class="bi bi-tiktok"></i></a>
+    <section id="ubicacion" class="py-5 bg-light">
+        <div class="container fade-in text-center" bis_skin_checked="1">
+            <h2 class="section-title mb-4">¿Dónde estamos?</h2>
+            <p class="mb-3">Calle Aura 123, Ciudad Moda, País</p>
+            <div style="max-width: 600px; margin: auto;" bis_skin_checked="1">
+                <iframe src="https://www.google.com/maps?q=-34.6037,-58.3816&amp;z=15&amp;output=embed" width="100%" height="350" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <p>Email: contacto@aura.com</p>
-            <p>&copy; 2025 Aura. Todos los derechos reservados.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                    <a class="logo" href="#">Aura</a>
+                    <p class="mt-3">Diseños que celebran tu confianza y feminidad.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Colección</a></li>
+                        <li><a href="#sobre-nosotras">Sobre Nosotras</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Ayuda</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Guía de Tallas</a></li>
+                        <li><a href="#">Envíos y Devoluciones</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5>Suscríbete a nuestro boletín</h5>
+                    <p>Recibe ofertas exclusivas y las últimas novedades.</p>
+                    <form class="newsletter-form d-flex mt-3">
+                        <input type="email" class="form-control me-2" placeholder="Tu correo electrónico">
+                        <button type="submit" class="btn">Suscribir</button>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-4 mt-lg-0">
+                </div>
+            </div>
+            <div class="footer-bottom">
+             <p>&copy; 2025 Aura. Todos los derechos reservados.</p>
+             <p style="font-size:0.95rem; margin-top:0.5rem; color:#ccc;">Diseñado por Victor Alfonso Parejo</p>
+            </div>
         </div>
     </footer>
+    <!-- Mapa de Ubicación -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

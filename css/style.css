@@ -1,101 +1,335 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
+/* --- Animaciones y Efectos --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.hover-scale {
+    transition: transform 0.3s;
+}
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-    --primary-color: #FADADD; /* Rosa pálido */
-    --secondary-color: #FFD700; /* Dorado */
-    --text-color: #36454F; /* Gris carbón */
-    --background-color: #FFFFFF; /* Blanco */
+    --primary-color: #008080; /* Teal */
+    --accent-color: #FF6F61; /* Coral */
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --light-gray: #F8F9FA;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
-    padding-top: 56px; /* Ajuste para la barra de navegación fija */
+    background-color: var(--background-color);
+    padding-top: 90px; /* Ajuste para la barra de navegación fija */
 }
 
-/* Logo */
-.logo {
+/* --- General --- */
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
     font-weight: 700;
-    color: var(--text-color);
 }
 
-/* Navegación */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+}
+
+/* --- Navbar --- */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.4s ease, padding 0.4s ease;
+    padding: 20px 0;
 }
 
-.nav-link {
-    font-weight: 400;
+.navbar.scrolled {
+    background-color: var(--background-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
 }
 
-/* Hero Section */
+.navbar-brand.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    transition: color 0.3s;
+    margin: 0 10px;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: var(--primary-color);
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar .navbar-toggler {
+    border: none;
+}
+
+.navbar .d-flex .nav-link {
+    font-size: 1.2rem;
+}
+
+/* --- Hero Section --- */
 .hero-section {
-    background: url('../imagenes/234-1920x1080.jpg') no-repeat center center/cover;
-    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imagenes/234-1920x1080.jpg') no-repeat center center/cover;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+    text-align: center;
 }
 
 .hero-section h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.hero-section .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--text-color);
-    font-weight: bold;
-    padding: 12px 24px;
-    transition: background-color 0.3s;
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto;
 }
 
-.hero-section .btn-primary:hover {
-    background-color: #F8C8D0;
+.btn-custom {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
 }
 
-/* Product Cards */
+.btn-custom:hover {
+    background-color: #E55B50;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --- Productos --- */
+#productos {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
 .product-card {
     border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    background-color: var(--background-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
-/* Testimonios Carousel */
+.product-card .card-img-top {
+    border-radius: 15px 15px 0 0;
+}
+
+.product-card .card-body {
+    padding: 1.5rem;
+}
+
+.product-card .card-title {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.product-card .card-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.btn-outline-custom {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Sobre Nosotras --- */
+#sobre-nosotras {
+    padding: 6rem 0;
+}
+
+#sobre-nosotras h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+#sobre-nosotras p {
+    line-height: 1.8;
+}
+
+#sobre-nosotras img {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Testimonios --- */
+#testimonios {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
 #testimonialCarousel .carousel-inner {
     max-width: 800px;
     margin: auto;
 }
 
 .testimonial-card {
-    padding: 2rem 4rem;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.rating .bi-star-fill, .rating .bi-star-half {
+    color: var(--accent-color);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 1rem;
 }
 
 #testimonialCarousel .carousel-control-prev-icon,
 #testimonialCarousel .carousel-control-next-icon {
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     border-radius: 50%;
 }
 
-.rating .bi-star-fill, .rating .bi-star-half {
-    color: var(--secondary-color); /* Dorado */
+/* --- Footer --- */
+.footer {
+    background-color: var(--text-color);
+    color: white;
+    padding: 2.5rem 0 1.5rem 0;
 }
 
-/* Footer */
-footer .bi {
-    font-size: 1.5rem;
+.footer a {
+    color: white;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
-footer a:hover {
-    color: var(--primary-color) !important;
+.footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.footer .logo {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.footer .footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer .newsletter-form .form-control {
+    background-color: #4a4a4a;
+    border: none;
+    color: white;
+}
+
+.footer .newsletter-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.footer .newsletter-form .btn {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.footer .footer-bottom {
+    border-top: 1px solid #4a4a4a;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
 }
